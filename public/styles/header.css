@@ -1,0 +1,12 @@
+header {
+  height: 400px;
+  width: 100%;
+  position: relative;
+  top: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: darkorange;
+  background-image: url("/images/asfalt-dark.png");
+}
