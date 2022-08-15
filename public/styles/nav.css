@@ -1,0 +1,24 @@
+nav {
+  display: flex;
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding: 0 1.5em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav span {
+  font-family: "Bungee", "Sans-serif";
+}
+
+nav div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav i {
+  color: red;
+}
