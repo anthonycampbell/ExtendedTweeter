@@ -1,0 +1,35 @@
+.new-tweet {
+  font-family: "Source sans pro", "Sans-serif";
+  text-align: start;
+}
+
+.new-tweet {
+  font-weight: 600;
+}
+
+.new-tweet textarea {
+  border: none;
+  resize: none;
+  width: 100%;
+  background-color: inherit;
+  border-bottom: 1px solid black;
+}
+
+.new-tweet textarea:focus-visible {
+  outline-color: inherit;
+  outline-style: auto;
+  outline-width: 0;
+}
+
+.new-tweet footer {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Bungee", "Sans-serif";
+}
+
+.new-tweet button {
+  background-color: #4056A1;
+  color: #FFFFFF;
+  border: none;
+  font-size: 66%;
+}
