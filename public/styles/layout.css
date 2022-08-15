@@ -23,3 +23,19 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ main {
+  width: 90%;
+  background-color: inherit;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 120px;
+  margin-left: 5%;
+  margin-right: 5%;
+ }
+
+ main p {
+  text-align: justify;
+ }
