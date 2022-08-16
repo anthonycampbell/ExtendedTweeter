@@ -3,22 +3,17 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-const tweetData = {
-  "user": {
-    "name": "Newton",
-    "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-    },
-  "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-  "created_at": 1461116232227
+const loadTweets = function(){
+  $.ajax('/tweets', {method: 'GET'})
+  .then(function(jsonTweets){
+    renderTweets(jsonTweets);
+  });
 }
 
 const renderTweets = function(tweets) {
   $(document).ready(function (){
     for (const tweet of tweets){
-      const $tweet = createTweetElement(tweetData);
+      const $tweet = createTweetElement(tweet);
       $("#tweets-container").append($tweet);
     }
   });
@@ -37,7 +32,8 @@ const createTweetElement = function (tweetData){
   $header.append($handle);
   const $content = $(`<div class="content">${tweetData.content.text}</div>`);
   const $footer = $(`<footer></footer`);
-  const $timestamp = $(`<span>${tweetData.created_at}</span>`);
+  const daysAgo = timeago.format(tweetData.created_at);
+  const $timestamp = $(`<span>${daysAgo}</span>`);
   const $icons = $(`<div class="icons">
                       <i class="fa-solid fa-flag"></i>
                       <i class="fa-solid fa-retweet"></i>
@@ -52,4 +48,5 @@ const createTweetElement = function (tweetData){
   return $tweet;
 }
 
-renderTweets([tweetData]);
+
+loadTweets();
