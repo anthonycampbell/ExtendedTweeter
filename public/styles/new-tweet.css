@@ -37,3 +37,9 @@
 .new-tweet .red {
   color: red;
 }
+
+.error {
+  background-color: red;
+  color: white;
+  text-align: center;
+}
