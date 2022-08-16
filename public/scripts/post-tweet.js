@@ -1,8 +1,15 @@
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 $(document).ready(function(){
   $(".new-tweet form").submit(function(e){
     e.preventDefault();
-    const data = $(this).serialize();
     const text = $(this.text).val();
+    $(this.text).val(escape(text));
+    const data = $(this).serialize();
     if (text === null || text.length === 0){
       return alert("Tweet must contain content");
     }
