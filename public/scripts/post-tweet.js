@@ -21,6 +21,8 @@ $(document).ready(function(){
       $(".error").slideDown();
       return;
     }
+    $(this.text).val('');
+    $(this.text).focus();
     $.ajax('/tweets', { method: 'POST', data: data })
     .then(function () {
       const $tweets = $(`<section id="tweets-container"></section>`);
