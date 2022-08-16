@@ -33,3 +33,7 @@
   border: none;
   font-size: 66%;
 }
+
+.new-tweet .red {
+  color: red;
+}
