@@ -10,8 +10,10 @@ $(document).ready(function(){
       return alert("Tweet is too long");
     }
     $.ajax('/tweets', { method: 'POST', data: data })
-    .then(function (res) {
-      console.log('Success', res);
+    .then(function () {
+      const $tweets = $(`<section id="tweets-container"></section>`);
+      $("#tweets-container").replaceWith($tweets);
+      loadTweets();
     });
   });
 });
