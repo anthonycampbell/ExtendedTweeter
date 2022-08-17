@@ -11,18 +11,20 @@ nav {
   z-index: 1;
 }
 
-nav button {
-  background-color: #4056A1;
-}
-
 nav span {
   font-family: "Bungee", "Sans-serif";
 }
 
-nav div {
+nav button {
+  background-color: #4056A1;
+  border-style: none;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+nav button:hover {
+  background-color: #C19A35;
 }
 
 nav i {
