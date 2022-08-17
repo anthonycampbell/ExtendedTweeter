@@ -23,10 +23,18 @@ nav button {
   align-items: center;
 }
 
-nav button:hover {
-  background-color: #C19A35;
+nav button:hover i {
+  animation-name: bounceWrite;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounceWrite {
+  0% {transform: translateY(0px);}
+  50% {transform: translateY(5px);}
+  100% {transform: translateY(0px);}
 }
 
 nav i {
-  color: red;
+  color: #FF0000;
 }

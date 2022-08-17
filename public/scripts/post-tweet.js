@@ -43,6 +43,7 @@ $(document).ready(function() {
   });
 });
 
+// Toggle form on nav button click
 $(document).ready(function() {
   $('nav button').click(function() {
     const $newTweet = $(".new-tweet");
