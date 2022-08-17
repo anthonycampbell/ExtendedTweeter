@@ -1,4 +1,4 @@
-#tweets-container article{
+#tweets-container article {
   width: 100%;
   border: 1px solid black;
   margin-top: 30px;
@@ -7,7 +7,7 @@
   font-family: "Source sans pro", "Sans-serif";
 }
 
-#tweets-container article:hover{
+#tweets-container article:hover {
   box-shadow: 5px 10px;
 }
 
@@ -17,7 +17,7 @@
   align-items: center;
 }
 
-#tweets-container header .user{
+#tweets-container header .user {
   display: flex;
   align-items: center;
 }

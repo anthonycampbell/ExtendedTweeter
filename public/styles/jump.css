@@ -11,16 +11,26 @@
   width: 2em;
   display: none;
 }
+
 #jump i {
   animation-duration: 1s;
   animation-iteration-count: infinite;
 }
+
 #jump:hover i {
   animation-name: bounceJump;
 }
 
 @keyframes bounceJump {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }

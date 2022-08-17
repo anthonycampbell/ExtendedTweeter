@@ -1,6 +1,6 @@
-$(document).ready(function (){
-  $(window).scroll(function (){
-    if ($('nav').offset().top === 0){
+$(document).ready(function() {
+  $(window).scroll(function() {
+    if ($('nav').offset().top === 0) {
       $('#jump').hide();
       $('nav button').show();
       return;
@@ -9,7 +9,7 @@ $(document).ready(function (){
     $('nav button').hide();
   });
   
-  $('#jump').click(function (){
+  $('#jump').click(function() {
     $(window).scrollTop(0);
     $('.new-tweet').slideDown();
     $(".new-tweet textarea").focus();
