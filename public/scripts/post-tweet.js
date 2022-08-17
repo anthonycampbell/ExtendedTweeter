@@ -16,29 +16,28 @@ const isError = function(text){
 
 $(document).ready(function(){
   $(".new-tweet form").submit(function(e){
+    e.preventDefault();
     const $error = $('.error');
     $error.hide();
-
-    e.preventDefault();
     let $tweetText = $(this.text);
-    const text = $tweetText.val();
-    $tweetText.val(esc(text));
-    const data = $(this).serialize();
-    const err = isError(text);
-
+    const tweetTextVal = $tweetText.val();
+    const err = isError(tweetTextVal);
     if (err){
       $error.html(err);
       $error.slideDown();
       return;
     }
 
-    $tweetText.val('');
+    $tweetText.val(esc(tweetTextVal));
+    const data = $(this).serialize();
+    $tweetText.val('').trigger('input');
     $tweetText.focus();
     $.ajax('/tweets', { method: 'POST', data: data })
-    .then(function (e, r) {
+    .then(function () {
       $.ajax('/tweets', {method: 'GET'})
       .then(function (res){
-        $("#tweets-container").prepend(createTweetElement(res[res.length-1]));
+        const $latestTweet = createTweetElement(res[res.length-1]);
+        $("#tweets-container").prepend($latestTweet);
       });
     });
   });
