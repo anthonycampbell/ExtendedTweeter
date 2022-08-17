@@ -1,33 +1,45 @@
-const escape = function (str) {
+const esc = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
 
+const isError = function(text){
+  if (text === null || text.length === 0){
+    return "Tweet must contain content";
+  }
+  if (text.length > 140){
+    return "Tweet is too long"
+  }
+  return "";
+}
+
 $(document).ready(function(){
   $(".new-tweet form").submit(function(e){
-    $(".error").hide();
+    const $error = $('.error');
+    $error.hide();
+
     e.preventDefault();
-    const text = $(this.text).val();
-    $(this.text).val(escape(text));
+    let $tweetText = $(this.text);
+    const text = $tweetText.val();
+    $tweetText.val(esc(text));
     const data = $(this).serialize();
-    if (text === null || text.length === 0){
-      $(".error").html("Tweet must contain content");
-      $(".error").slideDown();
+    const err = isError(text);
+
+    if (err){
+      $error.html(err);
+      $error.slideDown();
       return;
     }
-    if (text.length > 140){
-      $(".error").html("Tweet is too long");
-      $(".error").slideDown();
-      return;
-    }
-    $(this.text).val('');
-    $(this.text).focus();
+
+    $tweetText.val('');
+    $tweetText.focus();
     $.ajax('/tweets', { method: 'POST', data: data })
-    .then(function () {
-      const $tweets = $(`<section id="tweets-container"></section>`);
-      $("#tweets-container").replaceWith($tweets);
-      loadTweets();
+    .then(function (e, r) {
+      $.ajax('/tweets', {method: 'GET'})
+      .then(function (res){
+        $("#tweets-container").prepend(createTweetElement(res[res.length-1]));
+      });
     });
   });
 });

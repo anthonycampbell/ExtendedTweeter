@@ -11,6 +11,10 @@ nav {
   z-index: 1;
 }
 
+nav button {
+  background-color: #4056A1;
+}
+
 nav span {
   font-family: "Bungee", "Sans-serif";
 }
