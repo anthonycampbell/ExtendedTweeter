@@ -4,23 +4,23 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const loadTweets = function(){
+const loadTweets = function() {
   $.ajax('/tweets', {method: 'GET'})
-  .then(function(jsonTweets){
-    renderTweets(jsonTweets);
-  });
-}
+    .then(function(jsonTweets) {
+      renderTweets(jsonTweets);
+    });
+};
 
 const renderTweets = function(tweets) {
-  $(document).ready(function (){
-    for (const tweet of tweets){
+  $(document).ready(function() {
+    for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
       $("#tweets-container").prepend($tweet);
     }
   });
-}
+};
 
-const createTweetElement = function (tweetData){
+const createTweetElement = function(tweetData) {
   const daysAgo = timeago.format(tweetData.created_at);
   const $tweet = $(
     `<article>
@@ -45,6 +45,6 @@ const createTweetElement = function (tweetData){
     </article>`
   );
   return $tweet;
-}
+};
 
 loadTweets();
