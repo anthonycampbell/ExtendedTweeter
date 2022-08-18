@@ -29,23 +29,19 @@ nav {
   position: fixed;
   z-index: 1;
 }
-
 nav span {
   font-family: "Bungee", "Sans-serif";
 }
-
 nav button {
   background-color: rgba(64, 86, 161, 0);
   color: #FFFFFF;
   border-style: none;
 }
-
 nav button:hover i {
   animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-name: bounceNav;
 }
-
 nav i {
   color: #FF0000;
 }
