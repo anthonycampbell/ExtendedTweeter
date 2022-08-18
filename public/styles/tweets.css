@@ -3,16 +3,6 @@
   justify-content: space-between;
 }
 
-@keyframes bounceJump {
-  50% {
-    transform: translateY(-5px);
-  }
-}
-@keyframes bounceNav {
-  50% {
-    transform: translateY(5px);
-  }
-}
 #tweets-container article {
   width: 100%;
   border: 1px solid black;
@@ -34,11 +24,11 @@
   margin-top: 20px;
   border-top: 1px solid black;
 }
-#tweets-container article footer .icons {
+#tweets-container article footer .fa-solid {
   font-size: smaller;
   color: #4056A1;
 }
-#tweets-container article footer .icons .fa-solid:hover {
+#tweets-container article footer .fa-solid:hover {
   color: #C19A35;
 }
 

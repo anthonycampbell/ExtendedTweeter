@@ -3,16 +3,6 @@
   justify-content: space-between;
 }
 
-@keyframes bounceJump {
-  50% {
-    transform: translateY(-5px);
-  }
-}
-@keyframes bounceNav {
-  50% {
-    transform: translateY(5px);
-  }
-}
 .new-tweet {
   margin-top: 30px;
   font-weight: 600;
@@ -23,10 +13,6 @@
   width: 100%;
   background-color: inherit;
   border-bottom: 1px solid black;
-}
-.new-tweet textarea:focus-visible {
-  outline-color: inherit;
-  outline-style: auto;
   outline-width: 0;
 }
 .new-tweet footer {
@@ -35,14 +21,13 @@
 .new-tweet button {
   background-color: #4056A1;
   color: #FFFFFF;
-  border: none;
   font-size: 66%;
-}
-.new-tweet .red {
-  color: red;
 }
 .new-tweet .error {
   background-color: red;
   color: #FFFFFF;
   text-align: center;
+}
+.new-tweet .red {
+  color: red;
 }

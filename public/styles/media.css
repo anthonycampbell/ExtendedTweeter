@@ -1,20 +1,10 @@
-@keyframes bounceJump {
-  50% {
-    transform: translateY(-5px);
-  }
-}
-@keyframes bounceNav {
-  50% {
-    transform: translateY(5px);
-  }
-}
 @media only screen and (min-width: 1024px) {
   nav,
 nav button {
     background-color: rgb(64, 86, 161);
     color: #FFFFFF;
   }
-  body > header {
+  #profile {
     position: relative;
     top: 120px;
     width: 28%;

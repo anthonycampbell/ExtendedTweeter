@@ -1,26 +1,16 @@
-body > header {
+#profile {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-@keyframes bounceJump {
-  50% {
-    transform: translateY(-5px);
-  }
-}
-@keyframes bounceNav {
-  50% {
-    transform: translateY(5px);
-  }
-}
-body > header {
+#profile {
   justify-content: center;
   height: 400px;
   width: 100%;
   background-color: darkorange;
   background-image: url("/images/asfalt-dark.png");
 }
-body > header img {
+#profile img {
   width: 185px;
 }

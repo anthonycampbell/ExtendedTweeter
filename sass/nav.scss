@@ -17,14 +17,19 @@ nav {
   button {
     @include helpers.back-fore-color(rgb(64, 86, 161, 0), #FFFFFF);
     @extend %flex-center-col;
-    border-style: none;
+  }
+
+  i {
+    color: #FF0000;
   }
 
   button:hover i {
     @include helpers.bounceDeclaration('bounceNav');
   }
+}
 
-  i {
-    color: #FF0000;
+@keyframes bounceNav {
+  50% {
+    transform: translateY(5px);
   }
 }

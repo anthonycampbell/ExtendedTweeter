@@ -9,16 +9,6 @@ nav button {
   align-items: center;
 }
 
-@keyframes bounceJump {
-  50% {
-    transform: translateY(-5px);
-  }
-}
-@keyframes bounceNav {
-  50% {
-    transform: translateY(5px);
-  }
-}
 nav {
   background-color: rgba(64, 86, 161, 0);
   color: #FFFFFF;
@@ -35,13 +25,18 @@ nav span {
 nav button {
   background-color: rgba(64, 86, 161, 0);
   color: #FFFFFF;
-  border-style: none;
+}
+nav i {
+  color: #FF0000;
 }
 nav button:hover i {
   animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-name: bounceNav;
 }
-nav i {
-  color: #FF0000;
+
+@keyframes bounceNav {
+  50% {
+    transform: translateY(5px);
+  }
 }

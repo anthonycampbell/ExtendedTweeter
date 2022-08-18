@@ -7,7 +7,7 @@
     @include helpers.back-fore-color(rgb(64, 86, 161), #FFFFFF);
   }
 
-  body>header {
+  #profile {
     @include helpers.lowerElement;
     width: 28%;
     max-width: 400px;

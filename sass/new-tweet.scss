@@ -10,11 +10,6 @@
     width: 100%;
     background-color: inherit;
     border-bottom: 1px solid black;
-  }
-
-  textarea:focus-visible {
-    outline-color: inherit;
-    outline-style: auto;
     outline-width: 0;
   }
 
@@ -25,16 +20,15 @@
 
   button {
     @include helpers.back-fore-color(#4056A1, #FFFFFF);
-    border: none;
     font-size: 66%;
-  }
-
-  .red {
-    color: red;
   }
 
   .error {
     @include helpers.back-fore-color(red, #FFFFFF);
     text-align: center;
+  }
+
+  .red {
+    color: red;
   }
 }

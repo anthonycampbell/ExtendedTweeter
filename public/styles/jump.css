@@ -1,13 +1,3 @@
-@keyframes bounceJump {
-  50% {
-    transform: translateY(-5px);
-  }
-}
-@keyframes bounceNav {
-  50% {
-    transform: translateY(5px);
-  }
-}
 #jump {
   background-color: #FF0000;
   color: #FFFFFF;
@@ -26,4 +16,10 @@
   animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-name: bounceJump;
+}
+
+@keyframes bounceJump {
+  50% {
+    transform: translateY(-5px);
+  }
 }

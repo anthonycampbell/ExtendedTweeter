@@ -1,6 +1,6 @@
 @use 'helpers';
 
-body>header {
+#profile {
   @extend %flex-center-col;
   justify-content: center;
   height: 400px;
