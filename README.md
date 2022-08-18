@@ -8,6 +8,12 @@ This repository is the starter code for the project: Students will fork and clon
 
 https://user-images.githubusercontent.com/10249255/185465544-b09d1aa4-45e7-4dec-9e63-fe9a0a393e87.mp4
 
+## Stretch
+
+1. Toggle post form.
+2. Jump to top of document with dynamic button.
+3. Css preprocessed with Sass.
+
 
 !["Still image of Tweeter"](https://github.com/anthonycampbell/tweeter/blob/master/docs/tweeterScreen.png)
 
