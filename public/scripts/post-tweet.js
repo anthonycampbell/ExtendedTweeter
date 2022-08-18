@@ -19,7 +19,7 @@ $(document).ready(function() {
     e.preventDefault();
     const $error = $('.error');
     $error.hide();
-    let $tweetText = $(this.text);
+    let $tweetText = $(this.text); // text input of form
     const tweetTextVal = $tweetText.val();
     const err = isError(tweetTextVal);
     if (err) {
@@ -29,12 +29,12 @@ $(document).ready(function() {
     }
 
     $tweetText.val(esc(tweetTextVal));
-    const data = $(this).serialize();
-    $tweetText.val('').trigger('input');
+    const data = $(this).serialize();  // serialize form
+    $tweetText.val('').trigger('input'); // reset text of form
     $tweetText.focus();
     $.ajax('/tweets', { method: 'POST', data: data })
       .then(function() {
-        $.ajax('/tweets', {method: 'GET'})
+        $.ajax('/tweets', {method: 'GET'}) // render the new tweet
           .then(function(res) {
             const $latestTweet = createTweetElement(res[res.length - 1]);
             $("#tweets-container").prepend($latestTweet);
