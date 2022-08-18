@@ -1,0 +1,10 @@
+@keyframes bounceJump {
+  50% {
+    transform: translateY(-5px);
+  }
+}
+@keyframes bounceNav {
+  50% {
+    transform: translateY(5px);
+  }
+}

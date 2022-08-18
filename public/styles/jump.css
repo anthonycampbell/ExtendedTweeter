@@ -1,36 +1,29 @@
+@keyframes bounceJump {
+  50% {
+    transform: translateY(-5px);
+  }
+}
+@keyframes bounceNav {
+  50% {
+    transform: translateY(5px);
+  }
+}
 #jump {
-  color: #FFFFFF;
   background-color: #FF0000;
+  color: #FFFFFF;
+  display: none;
   position: fixed;
   right: 0px;
   bottom: 0px;
   margin: 20px;
-  z-index: 1;
-  border-radius: 1em;
-  height: 2em;
   width: 2em;
-  display: none;
-}
-
-#jump i {
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
+  height: 2em;
+  border-radius: 1em;
+  z-index: 1;
 }
 
 #jump:hover i {
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
   animation-name: bounceJump;
-}
-
-@keyframes bounceJump {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-5px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
 }

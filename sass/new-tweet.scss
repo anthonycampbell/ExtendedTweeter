@@ -1,18 +1,5 @@
-.new-tweet footer {
-  display: flex;
-  justify-content: space-between;
-}
+@use 'helpers';
 
-@keyframes bounceJump {
-  50% {
-    transform: translateY(-5px);
-  }
-}
-@keyframes bounceNav {
-  50% {
-    transform: translateY(5px);
-  }
-}
 .new-tweet {
   margin-top: 30px;
   font-weight: 600;
@@ -33,12 +20,12 @@
 }
 
 .new-tweet footer {
+  @extend %flex-between;
   font-family: "Bungee", "Sans-serif";
 }
 
 .new-tweet button {
-  background-color: #4056A1;
-  color: #FFFFFF;
+  @include helpers.back-fore-color(#4056A1, #FFFFFF);
   border: none;
   font-size: 66%;
 }
@@ -48,7 +35,6 @@
 }
 
 .error {
-  background-color: red;
-  color: #FFFFFF;
+  @include helpers.back-fore-color(red, #FFFFFF);
   text-align: center;
 }

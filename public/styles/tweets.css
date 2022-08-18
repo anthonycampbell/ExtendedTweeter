@@ -1,0 +1,53 @@
+#tweets-container header, #tweets-container footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+@keyframes bounceJump {
+  50% {
+    transform: translateY(-5px);
+  }
+}
+@keyframes bounceNav {
+  50% {
+    transform: translateY(5px);
+  }
+}
+#tweets-container article {
+  width: 100%;
+  border: 1px solid black;
+  margin: 30px 0;
+  padding: 20px;
+}
+
+#tweets-container article:hover {
+  box-shadow: 5px 10px;
+}
+
+#tweets-container header {
+  align-items: flex-start;
+}
+
+#tweets-container img {
+  height: 1em;
+}
+
+#tweets-container .content {
+  margin-top: 20px;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+#tweets-container footer {
+  margin-top: 20px;
+  border-top: 1px solid black;
+}
+
+#tweets-container .icons {
+  font-size: smaller;
+  color: #4056A1;
+}
+
+#tweets-container .fa-solid:hover {
+  color: #C19A35;
+}

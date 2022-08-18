@@ -1,26 +1,17 @@
-@media only screen and (min-width: 1024px){
-  nav, nav button {
-    background-color: rgb(64, 86, 161);
-    color: #FFFFFF;
-  }
+/* Error: There is no module with the namespace "helper".
+ *    ,
+ * 19 |     @include helper.lowerElement;
+ *    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *    '
+ *   sass/media.scss 19:5  root stylesheet */
 
-  body>header {
-    width: 28%;
-    display: inline-flex;
-    position: relative;
-    top: 120px;
-    min-width: 300px;
-    max-width: 400px;
-    margin-top: 60px;
-    margin-left: 5%;
-  }
-
-  .container {
-    width: 56%;
-    position: relative;
-    top: 120px;
-    max-width: 700px;
-    float: right;
-    margin-top: 30px;
-  }
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: There is no module with the namespace "helper".\a    \2577 \a 19 \2502      @include helper.lowerElement;\a    \2502      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   sass/media.scss 19:5  root stylesheet';
 }

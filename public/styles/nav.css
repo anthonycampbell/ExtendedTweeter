@@ -1,11 +1,30 @@
 nav {
   display: flex;
+  justify-content: space-between;
+}
+
+nav button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes bounceJump {
+  50% {
+    transform: translateY(-5px);
+  }
+}
+@keyframes bounceNav {
+  50% {
+    transform: translateY(5px);
+  }
+}
+nav {
+  background-color: rgba(64, 86, 161, 0);
+  color: #FFFFFF;
   height: 120px;
   width: 100%;
-  background-color: rgb(64, 86, 161, 0);
-  color: #FFFFFF;
   padding: 0 1.5em;
-  justify-content: space-between;
   align-items: center;
   position: fixed;
   z-index: 1;
@@ -16,32 +35,15 @@ nav span {
 }
 
 nav button {
-  background-color: inherit;
-  color: inherit;
+  background-color: rgba(64, 86, 161, 0);
+  color: #FFFFFF;
   border-style: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 nav button:hover i {
-  animation-name: bounceWrite;
   animation-duration: 1s;
   animation-iteration-count: infinite;
-}
-
-@keyframes bounceWrite {
-  0% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(5px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
+  animation-name: bounceNav;
 }
 
 nav i {

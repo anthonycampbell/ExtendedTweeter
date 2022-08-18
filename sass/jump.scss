@@ -1,0 +1,18 @@
+@use 'helpers';
+
+#jump {
+  @include helpers.back-fore-color(#FF0000, #FFFFFF);
+  display: none;
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  margin: 20px;
+  width: 2em;
+  height: 2em;
+  border-radius: 1em;
+  z-index: 1;
+}
+
+#jump:hover i {
+  @include helpers.bounceDeclaration('bounceJump');
+}

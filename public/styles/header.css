@@ -1,11 +1,27 @@
-body>header {
-  height: 400px;
-  width: 100%;
+body > header {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+}
+
+@keyframes bounceJump {
+  50% {
+    transform: translateY(-5px);
+  }
+}
+@keyframes bounceNav {
+  50% {
+    transform: translateY(5px);
+  }
+}
+body > header {
+  justify-content: center;
+  height: 400px;
+  width: 100%;
   background-color: darkorange;
   background-image: url("/images/asfalt-dark.png");
-  font-family: "Source sans pro", "Sans-serif";
+}
+
+body > header img {
+  width: 185px;
 }

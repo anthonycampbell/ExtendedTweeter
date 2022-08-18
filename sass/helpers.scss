@@ -1,0 +1,39 @@
+%flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+%flex-center-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin lowerElement() {
+  position: relative;
+  top: 120px;
+}
+
+@mixin back-fore-color($back, $fore) {
+  background-color: $back;
+  color: $fore;
+}
+
+
+@mixin bounceDeclaration($mag) {
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-name: #{$mag};
+}
+
+@keyframes bounceJump {
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes bounceNav {
+  50% {
+    transform: translateY(5px);
+  }
+}

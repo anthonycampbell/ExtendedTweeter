@@ -1,0 +1,30 @@
+@use 'helpers';
+
+nav {
+  @extend %flex-between;
+  @include helpers.back-fore-color(rgb(64, 86, 161, 0), #FFFFFF);
+  height: 120px;
+  width: 100%;
+  padding: 0 1.5em;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+}
+
+nav span {
+  font-family: "Bungee", "Sans-serif";
+}
+
+nav button {
+  @include helpers.back-fore-color(rgb(64, 86, 161, 0), #FFFFFF);
+  @extend %flex-center-col;
+  border-style: none;
+}
+
+nav button:hover i {
+  @include helpers.bounceDeclaration('bounceNav');
+}
+
+nav i {
+  color: #FF0000;
+}
