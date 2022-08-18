@@ -2,7 +2,7 @@ nav {
   display: flex;
   height: 120px;
   width: 100%;
-  background-color: #4056A1;
+  background-color: rgb(64, 86, 161, 0);
   color: #FFFFFF;
   padding: 0 1.5em;
   justify-content: space-between;
@@ -16,7 +16,8 @@ nav span {
 }
 
 nav button {
-  background-color: #4056A1;
+  background-color: inherit;
+  color: inherit;
   border-style: none;
   display: flex;
   flex-direction: column;
