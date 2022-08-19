@@ -23,6 +23,7 @@ $(document).ready(function() {
   const loadTweets = function() {
     $.ajax('/tweets', { method: 'GET' })
       .then(function(jsonTweets) {
+        $("#tweets-container").empty();
         renderTweets(jsonTweets);
       });
   };
@@ -47,11 +48,7 @@ $(document).ready(function() {
     $tweetText.focus();
     $.ajax('/tweets', { method: 'POST', data: data })
       .then(function() {
-        $.ajax('/tweets', {method: 'GET'}) // render the new tweet
-          .then(function(res) {
-            const $latestTweet = createTweetElement(res[res.length - 1]);
-            $("#tweets-container").prepend($latestTweet);
-          });
+        loadTweets();
       });
   });
 
