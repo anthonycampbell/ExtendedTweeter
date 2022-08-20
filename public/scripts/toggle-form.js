@@ -1,6 +1,9 @@
+(function() {
+  $(document).ready(function() {
+    $('nav button').on('click', toggleForm);
+  });
 
-$(document).ready(function() {
-  $('nav button').click(function() {
+  const toggleForm = function() {
     const $newTweet = $(".new-tweet");
     if (!$newTweet.is(':visible')) {
       $newTweet.slideDown();
@@ -10,6 +13,6 @@ $(document).ready(function() {
       return;
     }
     $newTweet.slideUp();
-  });
-});
+  };
+})();
 
